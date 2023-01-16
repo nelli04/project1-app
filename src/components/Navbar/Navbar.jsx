@@ -5,20 +5,20 @@ import n from './Navbar.module.css';
 const Navbar = () => {
     return (
     <nav className = {n.nav}>
-    <div className = {n.item}>
+    <div className = {`${n.item}${n.active}`}>
       <Link to = '/profile' activeClassName = {n.activeLink}>Profile</Link>
     </div>
     <div className = {`${n.item}${n.active}`}>
-      <Link to = '/dialogs'>Messages</Link>
+      <Link to = '/dialogs' activeClassName = {n.activeLink}>Messages</Link>
     </div>
-    <div className = {n.item}>
-      <Link to = 'news'>News</Link>
+    <div className = {`${n.item}${n.active}`}>
+      <Link to = 'news' activeClassName = {n.activeLink}>News</Link>
     </div>
-    <div className = {n.item}>
-      <Link to = 'music'>Music</Link>
+    <div className = {`${n.item}${n.active}`}>
+      <Link to = 'music' activeClassName = {n.activeLink}>Music</Link>
     </div>
-    <div className = {n.item}>
-      <Link to = 'setting'>Settings</Link>
+    <div className = {`${n.item}${n.active}`}>
+      <Link to = 'setting'activeClassName = {n.activeLink}>Settings</Link>
     </div>
   </nav>
     )
