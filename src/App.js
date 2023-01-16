@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route, BrowserRouter} from "react-router-dom"
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
 
@@ -10,7 +10,7 @@ import Profile from './components/Profile/Profile';
 
 const App = (props)  => {
   return (
-    
+    <BrowserRouter>
     <div className = 'app-wrapper'>
       <Header />
       <Navbar /> 
@@ -24,7 +24,7 @@ const App = (props)  => {
         </Routes>
       </div>
     </div>
-    
+    </BrowserRouter>
   )
 }
 
