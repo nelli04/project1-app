@@ -6,6 +6,8 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Music from './components/Music/Music';
 import Profile from './components/Profile/Profile';
+import Settings from './components/Settings/Settings';
+import News from './components/News/News';
 
 
 
@@ -23,7 +25,8 @@ const App = ()  => {
         <Route path = '/profile' element = {<Profile/>}/>
         <Route path = '/header' element = {<Header/>}/>
         <Route path = '/music' element = {<Music/>}/>
-        <Route path = '' />
+        <Route path = '/news' element = {<News/>}/>
+        <Route path = '/settings' element = {<Settings/>}/>
         </Routes>
       </div>
     </div>
