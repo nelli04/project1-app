@@ -28,13 +28,17 @@ const Dialogs = () => {
 
 
     let dialogsData = [
+
        {id: 1,  name: 'Jeck'},
        {id: 2, name: 'Nick'},
        {id: 3, name: 'Aleksandr' }, 
        {id: 4, name: 'Mike'}
  ] 
     
- let dialogsElements = [
+ let dialogsElements = dialogsData.map(dialog => <DialogItem name = {dialog.name} id = {dialog.id} />)
+ 
+ [
+
                 <DialogItem name = {dialogsData[0].name} id = {dialogsData[0].id} />,
                 <DialogItem name = {dialogsData[1].name} id = {dialogsData[1].id} />,
                 <DialogItem name = {dialogsData[2].name} id = {dialogsData[2].id} />,
@@ -42,6 +46,7 @@ const Dialogs = () => {
  ]
 
 let messagesData = [
+
        {id: 1,  message: 'Hi'},
        {id: 2, message: 'Hello'},
        {id: 3, message: 'Hey' }, 
