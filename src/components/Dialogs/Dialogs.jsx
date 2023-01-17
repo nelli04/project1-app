@@ -6,45 +6,63 @@ const DialogItem = (props) => {
     
     return (
         <div className = {d.dialog + ' ' + d.active} >
-                   <NavLink to = {'/dialogs/' + props.id}>{props.name}</NavLink> 
+                   <NavLink to = {path}>
+                    {props.name}
+                   </NavLink> 
         </div>
     )
 }
 
 const MessageItem = (props) => {
     return (
-        <div className = {d.dialog}>{props.message}</div>
+        <NavLink to = {d.dialog}>
+            {props.message}
+        </NavLink>
     )
 }
 
+ 
 const Dialogs = () => {
+          let dialogsData = [
+       {id: Jeck,  name: 'Jeck'},
+       {id: Nick, name: 'Nick'},
+       {id: Aleksandr, name: 'Aleksandr' }, 
+       {id: Mike, name: 'Mike'}
+ ] 
     
+let messagesData = [
+       {id: Jeck,  message: 'Hi'},
+       {id: Nick, message: 'Hello'},
+       {id: Aleksandr, message: 'Hey' }, 
+       {id: Mike, message: 'Yo'}
+ ]
+   
     return (
-        <dialogs className = {d.dialogs}>
 
         <div className = {d.dialogs}>
 
             <div className = {d.dialogsItems}>
 
-                <DialogItem name = 'Jeck' id = 'Jeck' />
-                <DialogItem name = 'Nick' id = 'Nick' />
-                <DialogItem name = 'Aleksandr' id = 'Aleksandr' />
-                <DialogItem name = 'Make' id = 'Make' />
+                <DialogItem name = {dialogsData[0].name} id = {dialogsData[0].id} />
+                <DialogItem name = {dialogsData[1].name} id = {dialogsData[1].id} />
+                <DialogItem name = {dialogsData[2].name} id = {dialogsData[2].id} />
+                <DialogItem name = {dialogsData[3].name} id = {dialogsData[3].id} />
                 
             </div>
 
             
-            <div className = {d.messages}>
+            <div className = {d.messagesItems}>
 
-                <MessageItem message = 'Hi'/>
-                <MessageItem message = 'Hello'/>
-                <MessageItem message = 'Hey'/>
-                <MessageItem message = 'Yo'/>
+                <MessageItem message = {messagesData[0].message}/>
+                <MessageItem message = {messagesData[1].message}/>
+                <MessageItem message = {messagesData[2].message}/>
+                <MessageItem message = {messagesData[3].message}/>
 
             </div>
         </div>
-      </dialogs>
-    )
+     
+      )
+    
 }
 
 export default Dialogs;
