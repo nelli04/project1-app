@@ -12,14 +12,14 @@ const MyPosts = (props) => {
     return (
     <div>
       <h3>My Posts</h3>
-      <div>
+    <div>
 
         <div>
-        <textarea></textarea>
+          <textarea></textarea>
         </div>
 
         <div>
-        <button>Add post</button>
+          <button>Add post</button>
         </div>
 
       </div>
