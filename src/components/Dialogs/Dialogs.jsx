@@ -4,7 +4,6 @@ import d from './Dialogs.module.css';
 import MessageItem from './Message/Message';
  
 const Dialogs = () => {
-
     let dialogsData = [
        {id: 1,  name: 'Jeck'},
        {id: 2, name: 'Nick'},
@@ -22,6 +21,7 @@ const Dialogs = () => {
      let dialogsElements = dialogsData.map(d => <DialogItem name = {d.name} id = {d.id}/>)
      let messagesElements = messagesData.map(m => <MessageItem message = {m.message}/>)
    
+     
     return (
         <div className = {d.dialogs}>
             <div className = {d.dialogsItems}>
