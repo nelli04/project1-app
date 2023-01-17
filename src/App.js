@@ -9,10 +9,6 @@ import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 import News from './components/News/News';
 
-
-
-
-
 const App = ()  => {
   return (
     <BrowserRouter>
