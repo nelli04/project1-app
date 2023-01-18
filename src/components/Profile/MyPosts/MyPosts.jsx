@@ -1,15 +1,5 @@
 import React from 'react';
-import c from './MyPosts.module.css';
-import Post from './Post/Post';
-
 const MyPosts = (props) => {
-
-  let postData = [
-    {id: 1,  message: 'Hi', likesCount: 10},
-    {id: 2, message: 'Hello', likesCount: 10}
-]
-
-let postElement = postData.map(p => <Post message = {p.message} likesCount = {p.likesCount} />) 
 
     return (
     <div>
@@ -24,10 +14,6 @@ let postElement = postData.map(p => <Post message = {p.message} likesCount = {p.
           <button>Add post</button>
         </div>
 
-      </div>
-
-      <div className = {c.posts}>
-        {postElement}
       </div>
 
     </div>
