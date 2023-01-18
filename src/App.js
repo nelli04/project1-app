@@ -11,6 +11,7 @@ import News from './components/News/News';
 import MyPosts from './components/Profile/MyPosts/MyPosts';
 
 
+
 const App = ()  => {
 
   let postData = [
