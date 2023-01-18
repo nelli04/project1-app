@@ -8,8 +8,19 @@ import Music from './components/Music/Music';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 import News from './components/News/News';
+import Post from './components/Profile/MyPosts/Post/Post';
+import c from './components/Profile/MyPosts/MyPosts.module.css'
+
 
 const App = ()  => {
+
+  let postData = [
+    {id: 1,  message: 'Hi', likesCount: 10},
+    {id: 2, message: 'Hello', likesCount: 10}
+]
+
+let postElement = postData.map(p => <Post message = {p.message} likesCount = {p.likesCount} />) 
+
   return (
     <BrowserRouter>
     <div className = 'app-wrapper'>
@@ -26,7 +37,13 @@ const App = ()  => {
         </Routes>
       </div>
     </div>
+
+      <div className = {c.posts}>
+        {postElement}
+      </div>
     </BrowserRouter>
+
+    
   )
 }
 
