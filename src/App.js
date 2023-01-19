@@ -13,7 +13,6 @@ import News from './components/News/News';
 
 const App = ()  => {
 
-
   return (
     <BrowserRouter>
     <div className = 'app-wrapper'>
