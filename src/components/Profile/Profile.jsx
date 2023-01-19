@@ -4,12 +4,11 @@ import p from './Profile.module.css';
 import ProfileItems from './ProfileItems/ProfileItems';
 
 const Profile = (props) => {
-     
     return (
     <profile className = {p.profile}>
     <div >
       <ProfileItems />
-      <MyPosts postData = {props.postData}/>
+      <MyPosts postData = {props.state.postData}/>
   </div>
 
   </profile>
