@@ -8,16 +8,11 @@ import Music from './components/Music/Music';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 import News from './components/News/News';
-import MyPosts from './components/Profile/MyPosts/MyPosts';
 
 
 
 const App = ()  => {
 
-  let postData = [
-    {id: 1,  message: 'Hi', likesCount: 10},
-    {id: 2, message: 'Hello', likesCount: 10}
-]
 
   return (
     <BrowserRouter>
