@@ -11,7 +11,7 @@ import News from './components/News/News';
 
 
 
-const App = ()  => {
+const App = (props)  => {
 
   return (
     <BrowserRouter>
@@ -21,7 +21,7 @@ const App = ()  => {
       <div className = 'app-wrapper-content'>
         <Routes>
         <Route path = '/dialogs' element = {<Dialogs/>}/>
-        <Route path = '/profile' element = {<Profile/>}/>
+        <Route path = '/profile' element = {<Profile postData = {props.postData}/>}/>
         <Route path = '/header' element = {<Header/>}/>
         <Route path = '/music' element = {<Music/>}/>
         <Route path = '/news' element = {<News/>}/>
