@@ -26,6 +26,7 @@
   }
 
 export let addPost = (postMessage) => {
+
   let newPost = {
     id: 5,
     message: postMessage,
@@ -34,4 +35,5 @@ export let addPost = (postMessage) => {
   state.profile.postData.push(newPost);
 }
 
-  export default state;
+
+export default state;
