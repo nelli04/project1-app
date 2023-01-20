@@ -31,7 +31,7 @@ export let addPost = (postMessage) => {
     message: postMessage,
     likesCount: 0
   };
-  state .profile.postData.push(newPost);
+  state.profile.postData.push(newPost);
 }
 
   export default state;
