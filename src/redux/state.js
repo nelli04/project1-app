@@ -14,7 +14,7 @@
         {id: 2, message: 'Hello'},
         {id: 3, message: 'Hey' }, 
         {id: 4, message: 'Yo'}     
-      ], 
+      ] 
     },
         dialogsData:  [
             {id: 1,  name: 'Jeck'},
