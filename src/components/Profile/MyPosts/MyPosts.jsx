@@ -5,9 +5,10 @@ import Post from './Post/Post'
 const MyPosts = (props) => {
  
   let postElement = props.postData.map(p => <Post message = {p.message} likesCount = {p.likesCount} />) 
-
+  let newPostElement = React.createRef();
   let addPost = () => {
-    alert('Hello, my Friend!')
+    let text = newPostElement.current.value;
+    alert(text)
   }
 
     return (
@@ -16,7 +17,7 @@ const MyPosts = (props) => {
     <div>
 
         <div>
-          <textarea></textarea>
+          <textarea ref = {newPostElement}></textarea>
         </div>
 
         <div>
