@@ -26,7 +26,7 @@ const MyPosts = (props) => {
 
       </div>
       <div className = {c.posts}>
-        {postElement}
+           {postElement}
       </div>
     </div>
   )
