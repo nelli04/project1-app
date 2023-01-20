@@ -16,7 +16,7 @@ const MyPosts = (props) => {
         </div>
 
         <div>
-          <button onClick = {() => (alert('Hello'))}>Add post</button>
+          <button onClick = {() => (alert('Hello'))}>Отправить</button>
         </div>
 
       </div>
