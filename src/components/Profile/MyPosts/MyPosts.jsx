@@ -3,8 +3,12 @@ import c from './MyPosts.module.css'
 import Post from './Post/Post'
 
 const MyPosts = (props) => {
-
+ 
   let postElement = props.postData.map(p => <Post message = {p.message} likesCount = {p.likesCount} />) 
+
+  let addPost = () => {
+    alert('Hello, my Friend!')
+  }
 
     return (
     <div>
@@ -16,7 +20,7 @@ const MyPosts = (props) => {
         </div>
 
         <div>
-          <button onClick = {() => (alert('Hello'))}>Отправить</button>
+          <button onClick = {addPost}>Отправить</button>
         </div>
 
       </div>
