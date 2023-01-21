@@ -12,11 +12,13 @@ const MyPosts = (props) => {
   }
 
     return (
-    <div className = {c.MyPosts}>
-      <h3>My Posts</h3>
+    <div >
+      <div className = {c.MyPosts}>
+      <h3 >My Posts</h3>
+      </div>
     <div>
 
-        <div>
+        <div className = {c.text}>
           <textarea ref = {newPostElement}></textarea>
         </div>
 
