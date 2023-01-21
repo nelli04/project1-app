@@ -12,7 +12,7 @@ const MyPosts = (props) => {
   }
 
     return (
-    <div>
+    <div className = {c.MyPosts}>
       <h3>My Posts</h3>
     <div>
 

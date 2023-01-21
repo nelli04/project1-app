@@ -1,22 +1,24 @@
 .app-wrapper {
-  
-  margin: 0 auto;
+  margin: auto;
   display: grid;
-  width: 1200px;
+  width: auto;
   grid-template-areas:
   'h h'
   'n c';
   border-radius: 10px;
 
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 90px 1fr;
   grid-template-columns: 0fr 10fr;
-  grid-gap: 10px;
+  grid-gap: 5px;
   
 }
 
 .app-wrapper-content {
   grid-area: c;
+  grid-template-rows: 90px 1fr;
+  grid-template-columns: 3fr 10fr;
   background-color: rgb(188, 185, 190);
   padding: 10px;
   border-radius: 15px;
+  background: gradient(, #343a40, #6c757d)
 }

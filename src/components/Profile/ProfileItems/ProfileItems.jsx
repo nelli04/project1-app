@@ -4,16 +4,14 @@ import pro from './ProfileItems.module.css';
 const ProfileItems = () => {
      
     return (
-    <profile className = {pro.profile}>
     <div >
     <div>
     <img className = {pro.img} src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
     </div>
     <div className = {pro.ava}>
-      ava + discription
+      @username
     </div>
   </div>
-  </profile>
   )
 }
 
