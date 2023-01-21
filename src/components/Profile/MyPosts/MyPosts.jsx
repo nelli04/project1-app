@@ -21,7 +21,7 @@ const MyPosts = (props) => {
         </div>
 
         <div>
-          <button className  = 'botton' onClick = {addPost}>Отправить</button>
+          <button className  = {c.botton} onClick = {addPost}>Отправить</button>
         </div>
 
       </div>
