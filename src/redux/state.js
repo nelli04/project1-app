@@ -7,6 +7,8 @@ import { rerenderEntireTree } from "../render/render";
             {id: 1,  message: 'Hi', likesCount: 10},
             {id: 2, message: 'Hello', likesCount: 10}
         ], 
+
+        newPostText: ''
         
     },
 
@@ -27,16 +29,22 @@ import { rerenderEntireTree } from "../render/render";
       }
   }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
 
   let newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profile.newPostText,
     likesCount: 0
   };
   state.profile.postData.push(newPost);
+  state.profile.newPostText = '';
   rerenderEntireTree(state);
 }
 
+export let updateNewPostText = (newText) => {
+
+  state.profile.newPostText = newText;
+  rerenderEntireTree(state);
+}
 
 export default state;
