@@ -7,9 +7,9 @@ const ProfileItems = () => {
     <profile className = {pro.profile}>
     <div >
     <div>
-    <img className = 'img'src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
+    <img className = {pro.img} src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
     </div>
-    <div className = 'ava'>
+    <div className = {pro.ava}>
       ava + discription
     </div>
   </div>
