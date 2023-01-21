@@ -7,7 +7,7 @@ const ProfileItems = () => {
     <profile className = {pro.profile}>
     <div >
     <div>
-    <img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBsbCAQtQimp5yI0Zx4vyR_FzPLUVzkdjDBN0N4_LAUo59inNQrSp6-Iz7qrfAXBENLGI&usqp=CAU' alt='' />
+    <img className = 'img'src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
     </div>
     <div>
       ava + discription
