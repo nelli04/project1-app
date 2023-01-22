@@ -45,13 +45,13 @@ let store = {
     };
     this._state.profile.postData.push(newPost);
     this._state.profile.newPostText = '';
-    rerenderEntireTree(this._state);
+    this._rerenderEntireTree(state);
   },
 
    updateNewPostText(newText) {
 
   state.profile.newPostText = newText;
-  rerenderEntireTree(this._state);
+  this._rerenderEntireTree(state);
 },
    subscribe (observer) {
   rerenderEntireTree = observer;
