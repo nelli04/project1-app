@@ -45,16 +45,16 @@ let store = {
     };
     this._state.profile.postData.push(newPost);
     this._state.profile.newPostText = '';
-    this._rerenderEntireTree(state);
+    this._rerenderEntireTree(this._state);
   },
 
    updateNewPostText(newText) {
 
-  state.profile.newPostText = newText;
-  this._rerenderEntireTree(state);
+    this._state.profile.newPostText = newText;
+    this._rerenderEntireTree(this._state);
 },
    subscribe (observer) {
-  rerenderEntireTree = observer;
+    this._rerenderEntireTree = observer;
 }
 }
 
