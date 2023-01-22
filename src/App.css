@@ -6,7 +6,7 @@
   'h h'
   'n c';
   grid-template-rows: 90px 1fr;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 0fr 10fr;
   grid-gap: 5px;
    
 }
@@ -18,5 +18,5 @@
   background-color: rgb(188, 185, 190);
   padding: 10px;
   border-radius: 15px;
-  background: gradient( #343a40, #6c757d)
+  background: gradient( #343a40, #6c757d);
 }
