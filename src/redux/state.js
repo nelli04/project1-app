@@ -48,14 +48,10 @@ let store = {
 
   state.profile.newPostText = newText;
   rerenderEntireTree(state);
-}
-
-}
-
-
-
-export const sabscribe = (observer) => {
+},
+   sabscribe (observer) {
   rerenderEntireTree = observer;
+}
 }
 
 export default state;
