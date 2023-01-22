@@ -42,15 +42,17 @@ let store = {
     state.profile.postData.push(newPost);
     state.profile.newPostText = '';
     rerenderEntireTree(state);
-  }
+  },
 
-}
-
-export const updateNewPostText = (newText) => {
+   updateNewPostText(newText) {
 
   state.profile.newPostText = newText;
   rerenderEntireTree(state);
 }
+
+}
+
+
 
 export const sabscribe = (observer) => {
   rerenderEntireTree = observer;
