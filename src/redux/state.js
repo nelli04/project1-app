@@ -1,8 +1,5 @@
-let rerenderEntireTree = () => {
-  console.log('');
-}
-
-  let state = {
+let store = {
+   _state: {
 
     profile: {
         postData: [
@@ -29,18 +26,24 @@ let rerenderEntireTree = () => {
             {id: 4, name: 'Mike'} 
         ]
       }
+  },
+
+  rerenderEntireTree() {
+    console.log('');
+  },
+
+   addPost () {
+
+    let newPost = {
+      id: 5,
+      message: state.profile.newPostText,
+      likesCount: 0
+    };
+    state.profile.postData.push(newPost);
+    state.profile.newPostText = '';
+    rerenderEntireTree(state);
   }
 
-export const addPost = () => {
-
-  let newPost = {
-    id: 5,
-    message: state.profile.newPostText,
-    likesCount: 0
-  };
-  state.profile.postData.push(newPost);
-  state.profile.newPostText = '';
-  rerenderEntireTree(state);
 }
 
 export const updateNewPostText = (newText) => {
