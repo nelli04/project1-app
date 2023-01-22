@@ -14,9 +14,9 @@ export let rerenderEntireTree = (state) => {
     </React.StrictMode>
   );
   }
-rerenderEntireTree(state);
+rerenderEntireTree(store._state);
 
-sabscribe(rerenderEntireTree);
+sabscribe(store.rerenderEntireTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
