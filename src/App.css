@@ -6,9 +6,9 @@
   'h h'
   'n c';
   grid-template-rows: 90px 1fr;
-  grid-template-columns: 0fr 10fr;
+  grid-template-columns: 1fr 10fr;
   grid-gap: 5px;
-   border-radius: 10%;
+   
 }
 
 .app-wrapper-content {
