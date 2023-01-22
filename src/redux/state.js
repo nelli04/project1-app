@@ -49,4 +49,8 @@ export const updateNewPostText = (newText) => {
   rerenderEntireTree(state);
 }
 
+export const sabscribe = (observer) => {
+  rerenderEntireTree = observer;
+}
+
 export default state;
