@@ -40,18 +40,18 @@ let store = {
 
     let newPost = {
       id: 5,
-      message: state.profile.newPostText,
+      message: this._state.profile.newPostText,
       likesCount: 0
     };
-    state.profile.postData.push(newPost);
-    state.profile.newPostText = '';
-    rerenderEntireTree(state);
+    this._state.profile.postData.push(newPost);
+    this._state.profile.newPostText = '';
+    rerenderEntireTree(this._state);
   },
 
    updateNewPostText(newText) {
 
   state.profile.newPostText = newText;
-  rerenderEntireTree(state);
+  rerenderEntireTree(this._state);
 },
    subscribe (observer) {
   rerenderEntireTree = observer;
