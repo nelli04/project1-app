@@ -49,7 +49,7 @@ let store = {
   state.profile.newPostText = newText;
   rerenderEntireTree(state);
 },
-   sabscribe (observer) {
+   subscribe (observer) {
   rerenderEntireTree = observer;
 }
 }
