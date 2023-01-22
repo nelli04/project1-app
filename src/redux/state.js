@@ -27,17 +27,13 @@ let store = {
         ]
       }
   },
-
   getState() {
     return this._state;
   },
-
-  rerenderEntireTree() {
+  _rerenderEntireTree() {
     console.log('');
   },
-
    addPost () {
-
     let newPost = {
       id: 5,
       message: this._state.profile.newPostText,
@@ -47,15 +43,13 @@ let store = {
     this._state.profile.newPostText = '';
     this._rerenderEntireTree(this._state);
   },
-
    updateNewPostText(newText) {
-
     this._state.profile.newPostText = newText;
     this._rerenderEntireTree(this._state);
-},
-   subscribe (observer) {
+  },
+   subscribe(observer) {
     this._rerenderEntireTree = observer;
-}
+  }
 }
 
 export default store;
