@@ -54,4 +54,4 @@ let store = {
 }
 }
 
-export default state;
+export default store;
