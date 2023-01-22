@@ -24,11 +24,11 @@ const Dialogs = (props) => {
                 {dialogsElements}                
             </div>
 
-            <div>
+        <div className = {d.messageText}>
             <textarea onChange = {onChangeMessage} ref = {newMessages}></textarea>
             </div>
 
-            <div>
+            <div className = {d.bottonText}>
             <button onClick = {textMessages}>Отправить</button>
             </div>
 
