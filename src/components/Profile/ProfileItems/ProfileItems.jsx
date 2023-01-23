@@ -7,10 +7,11 @@ const ProfileItems = () => {
     <div >
     <div className = 'container'>
     <img className = {pro.img} src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
-    </div>
     <div className = 'overlay'>
       @username
     </div>
+    </div>
+    
     <div className = {pro.ava}>
       @username
     </div>
