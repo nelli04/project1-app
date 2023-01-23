@@ -27,11 +27,14 @@ let store = {
         ]
       }
   },
+  _rerenderEntireTree() {
+    console.log('');
+  },
   getState() {
     return this._state;
   },
-  _rerenderEntireTree() {
-    console.log('');
+   subscribe(observer) {
+    this._rerenderEntireTree = observer;
   },
    addPost () {
     let newPost = {
@@ -46,10 +49,8 @@ let store = {
    updateNewPostText(newText) {
     this._state.profile.newPostText = newText;
     this._rerenderEntireTree(this._state);
-  },
-   subscribe(observer) {
-    this._rerenderEntireTree = observer;
   }
+  
 }
 
 export default store;
