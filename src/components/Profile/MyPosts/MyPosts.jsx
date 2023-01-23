@@ -16,19 +16,21 @@ const MyPosts = (props) => {
     props.updateNewPostText(text);
   }
 
+
+  
     return (
     <div >
-      <div className = {c.MyPosts}>
+      <div className = { c.MyPosts }>
       <h3 >My Posts</h3>
       </div>
     <div>
 
         <div className = {c.text}>
-          <textarea onChange = {onPostChange} ref = {newPostElement} value = {props.newPostText}/>
+          <textarea onChange = { onPostChange } ref = { newPostElement } value = {props.newPostText}/>
         </div>
 
         <div>
-          <button className  = {c.botton} onClick = {addPost}>Отправить</button>
+          <button className  = { c.botton } onClick = { addPost }>Отправить</button>
         </div>
 
       </div>
