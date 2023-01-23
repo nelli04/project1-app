@@ -5,9 +5,9 @@ const ProfileItems = () => {
      
     return (
     <div >
-    <div className = 'container'>
+    <div className = {pro.container}>
     <img className = {pro.img} src = 'https://img.freepik.com/premium-vector/doodle-face-avatar-for-social-media-line-art-people-face-isolated-on-white-background_559729-359.jpg' alt='' />
-    <div className = 'overlay'>
+    <div className = {pro.overlay}>
       @username
     </div>
     </div>
