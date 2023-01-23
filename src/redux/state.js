@@ -37,7 +37,7 @@ let store = {
     let newPost = {
       id: 5,
       message: this._state.profile.newPostText,
-      likesCount: 0
+      likesCount: 10
     };
     this._state.profile.postData.push(newPost);
     this._state.profile.newPostText = '';
