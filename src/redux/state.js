@@ -49,8 +49,22 @@ let store = {
    updateNewPostText(newText) {
     this._state.profile.newPostText = newText;
     this._rerenderEntireTree(this._state);
+  },
+  dispatch(action) {
+    if (action.type === 'ADD-POST') {
+      let newPost = {
+        id: 5,
+        message: this._state.profile.newPostText,
+        likesCount: 10
+      };
+      this._state.profile.postData.push(newPost);
+      this._state.profile.newPostText = '';
+      this._rerenderEntireTree(this._state);
+    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+      this._state.profile.newPostText = action.newText;
+      this._rerenderEntireTree(this._state);
+    }
   }
-  
 }
 
 export default store;
