@@ -2,7 +2,6 @@ import React from 'react';
 import DialogItem from './DialogItem/DialogItem';
 import d from './Dialogs.module.css';
 import MessageItem from './Message/Message';
-import {updateNewPostActionCreator} from "../../redux/state";
  
 const Dialogs = (props) => {
 
@@ -10,33 +9,14 @@ const Dialogs = (props) => {
      let messagesElements = props.state.messagesData.map(m => <MessageItem message = {m.message}/>)
      let newMessages = React.createRef();
 
-     let textMessages = () => {
-        let text = newMessages.current.value;
-        props.textMessages(text)
-     }
-
-     let onChangeMessage = () => {
-         let text = newMessages.current.value;
-         let action = updateNewPostActionCreator(text);
-         props.dispatch(action);
-     }
-
     return (
         <div className = {d.dialogs}>
             <div className = {d.dialogsItems}>
-                {dialogsElements}                
+                <div>{dialogsElements}</div>
             </div>
-
-        <div className = {d.messageText}>
-            <textarea onChange = {onChangeMessage} ref = {newMessages} value = {props.newMessageText}/>
-            </div>
-
-            <div className = {d.bottonText}>
-            <button onClick = {textMessages}>Отправить</button>
-            </div>
-
             <div className = {d.messagesItems}>
-                {messagesElements}
+                <div>{messagesElements}</div>
+                <div></div>
             </div>
         </div>     
       )    
