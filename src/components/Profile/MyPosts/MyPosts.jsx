@@ -2,13 +2,13 @@ import React from 'react';
 import c from './MyPosts.module.css'
 import Post from './Post/Post'
 
-let addPostActionCreator = () => {
+ export const addPostActionCreator = () => {
   return {
     type: 'ADD-POST'
   }
 }
 
-let updateNewPostActionCreator = (text) => {
+export const updateNewPostActionCreator = (text) => {
   return {
     type: 'UPDATE-NEW-POST-TEXT', newText: text
   }
