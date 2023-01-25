@@ -23,11 +23,14 @@ let store = {
       ], 
     
         dialogsData:  [
-            {id: 1,  name: 'Jeck'},
+            {id: 1,  name: 'Jack'},
             {id: 2, name: 'Nick'},
             {id: 3, name: 'Aleksandr' }, 
             {id: 4, name: 'Mike'} 
-        ]
+        ],
+
+        newMessageText: ''
+
       }
   },
   _rerenderEntireTree() {
