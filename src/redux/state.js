@@ -5,34 +5,27 @@ const SEND_MESSAGE = 'SEND_MESSAGE'
 
 let store = {
    _state: {
-
     profile: {
         postData: [
             {id: 1,  message: 'Hi', likesCount: 10},
             {id: 2, message: 'Hello', likesCount: 10}
-        ], 
-
+        ],
         newPostText: ''
-        
     },
-
     messages: {
         messagesData: [
         {id: 1,  message: 'Hi'},
         {id: 2, message: 'Hello'},
         {id: 3, message: 'Hey' }, 
         {id: 4, message: 'Yo'}     
-      ], 
-    
+      ],
         dialogsData:  [
             {id: 1,  name: 'Jack'},
             {id: 2, name: 'Nick'},
             {id: 3, name: 'Aleksandr' }, 
             {id: 4, name: 'Mike'} 
         ],
-
         newMessageText: ''
-
       }
   },
   _rerenderEntireTree() {
@@ -63,13 +56,17 @@ let store = {
     } else if (action.type === SEND_MESSAGE) {
         let messageBody = this._state.messages.newMessageText
         this._state.messages.newMessageText = '';
+        this._state.messages.push({id: 3,  message: messageBody})
         this._rerenderEntireTree(this._state);
   }
 }
 
-export const updateNewMessageActionCreator = (text) => ({
+export const sendMessageCreator = (text) => ({
     type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text
 })
+
+export const updateNewMessageBodyCreator = (text) => ({
+    type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text })
 
 export const addPostActionCreator = () => ({
         type: 'ADD-POST'
