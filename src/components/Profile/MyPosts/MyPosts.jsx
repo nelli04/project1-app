@@ -29,7 +29,7 @@ const MyPosts = (props) => {
         </div>
 
         <div>
-          <button className  = { c.botton } onClick = { addPost }>Отправить</button>
+          <button className  = { c.button} onClick = { addPost }>Отправить</button>
         </div>
 
       </div>
