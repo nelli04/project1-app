@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POS_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
+const SEND_MESSAGE = 'SEND_MESSAGE'
 
 let store = {
    _state: {
@@ -59,7 +60,10 @@ let store = {
     } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
         this._state.messages.newMessageText = action.newText;
         this._rerenderEntireTree(this._state);
-    }
+    } else if (action.type === SEND_MESSAGE) {
+        let messageBody = this._state.messages.newMessageText
+        this._state.messages.newMessageText = '';
+        this._rerenderEntireTree(this._state);
   }
 }
 
