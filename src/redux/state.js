@@ -1,3 +1,6 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POS_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 let store = {
    _state: {
 
@@ -37,7 +40,7 @@ let store = {
     this._rerenderEntireTree = observer;
   },
   dispatch(action) {
-    if (action.type === 'ADD-POST') {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: 5,
         message: this._state.profile.newPostText,
@@ -46,23 +49,19 @@ let store = {
       this._state.profile.postData.push(newPost);
       this._state.profile.newPostText = '';
       this._rerenderEntireTree(this._state);
-    } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+    } else if (action.type === UPDATE_NEW_POS_TEXT) {
       this._state.profile.newPostText = action.newText;
       this._rerenderEntireTree(this._state);
     }
   }
 }
 
-export const addPostActionCreator = () => {
-    return {
+export const addPostActionCreator = () => ({
         type: 'ADD-POST'
-    }
-}
+})
 
-export const updateNewPostActionCreator = (text) => {
-    return {
+export const updateNewPostActionCreator = (text) => ({
         type: 'UPDATE-NEW-POST-TEXT', newText: text
-    }
-}
+})
 
 export default store;
