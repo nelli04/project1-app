@@ -61,12 +61,12 @@ let store = {
   }
 }
 
-export const sendMessageCreator = (text) => ({
-    type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text
+export const sendMessageCreator = () => ({
+        type : 'SEND_MESSAGE'
 })
 
 export const updateNewMessageBodyCreator = (text) => ({
-    type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text })
+        type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text })
 
 export const addPostActionCreator = () => ({
         type: 'ADD-POST'
