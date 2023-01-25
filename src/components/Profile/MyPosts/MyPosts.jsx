@@ -1,18 +1,7 @@
 import React from 'react';
 import c from './MyPosts.module.css'
 import Post from './Post/Post'
-
- export const addPostActionCreator = () => {
-  return {
-    type: 'ADD-POST'
-  }
-}
-
-export const updateNewPostActionCreator = (text) => {
-  return {
-    type: 'UPDATE-NEW-POST-TEXT', newText: text
-  }
-}
+import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/state";
 
 const MyPosts = (props) => {
  
@@ -28,9 +17,6 @@ const MyPosts = (props) => {
     let action = updateNewPostActionCreator(text);
     props.dispatch(action);
   }
-
-
-
     return (
     <div >
       <div className = { c.MyPosts }>
