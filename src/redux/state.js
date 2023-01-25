@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POS_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 
 let store = {
    _state: {
@@ -55,9 +56,15 @@ let store = {
     } else if (action.type === UPDATE_NEW_POS_TEXT) {
       this._state.profile.newPostText = action.newText;
       this._rerenderEntireTree(this._state);
+    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+
     }
   }
 }
+
+export const updateNewMessageActionCreator = (text) => ({
+    type : 'UPDATE-NEW-MESSAGE-TEXT', newText: text
+})
 
 export const addPostActionCreator = () => ({
         type: 'ADD-POST'
