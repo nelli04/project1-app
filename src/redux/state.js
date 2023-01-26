@@ -1,3 +1,6 @@
+import profileReducer from "./profileReducer";
+import messagesReducer from "./messagesReducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
@@ -38,27 +41,10 @@ let store = {
         this._rerenderEntireTree = observer;
     },
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                message: this._state.profile.newPostText,
-                likesCount: 10
-            };
-            this._state.profile.postData.push(newPost);
-            this._state.profile.newPostText = '';
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profile.newPostText = action.newText;
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.messages.newMessageText = action.messageBody;
-            this._rerenderEntireTree(this._state);
-        } else if (action.type === SEND_MESSAGE) {
-            let messageBody = this._state.messages.newMessageText
-            this._state.messages.newMessageText = '';
-            this._state.messages.messagesData.push({id: 6, message: messageBody})
-            this._rerenderEntireTree(this._state);
-        }
+        this._state.postData = profileReducer(this._state.postData, action);
+        this._state.messagesData = messagesReducer(this._state.messagesData, action);
+        this._rerenderEntireTree(this._state);
+
     }
 }
 
