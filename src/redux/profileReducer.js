@@ -10,12 +10,13 @@ const profileReducer = (state, action) => {
             };
             state.postData.push(newPost);
             state.newPostText = '';
-            break;
+            return state;
         case UPDATE_NEW_POST_TEXT:
             state.profile.newPostText = action.newText;
-            break;
+            return state;
+        default:
+            return state;
     }
-    return state;
 }
 
 export const addPostActionCreator = () => ({type: 'ADD-POST'})

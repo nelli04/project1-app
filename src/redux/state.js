@@ -41,7 +41,7 @@ let store = {
         this._rerenderEntireTree = observer;
     },
     dispatch(action) {
-        this._state.postData = profileReducer(this._state.postData, action);
+        this._state.profile = profileReducer(this._state.profile, action);
         this._state.messagesData = messagesReducer(this._state.messagesData, action);
         this._rerenderEntireTree(this._state);
 
