@@ -51,7 +51,7 @@ let store = {
             this._state.profile.newPostText = action.newText;
             this._rerenderEntireTree(this._state);
         } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.messages.newMessageText = action.newText;
+            this._state.messages.newMessageText = action.messageBody;
             this._rerenderEntireTree(this._state);
         } else if (action.type === SEND_MESSAGE) {
             let messageBody = this._state.messages.newMessageText
