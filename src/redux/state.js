@@ -1,10 +1,10 @@
 import profileReducer from "./profileReducer";
 import messagesReducer from "./messagesReducer";
 
-const ADD_POST = 'ADD-POST';
+/*const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
-const SEND_MESSAGE = 'SEND_MESSAGE'
+const SEND_MESSAGE = 'SEND_MESSAGE'*/
 
 let store = {
     _state: {
@@ -48,15 +48,5 @@ let store = {
     }
 }
 
-export const addPostActionCreator = () => ({type: 'ADD-POST'})
-
-export const updateNewPostActionCreator = (text) => ({
-    type: UPDATE_NEW_POST_TEXT, newText: text
-})
-
-export const sendMessageCreator = () => ({type : 'SEND_MESSAGE'})
-
-export const updateNewMessageBodyCreator = (messageBody) => ({
-        type : UPDATE_NEW_MESSAGE_TEXT, messageBody: messageBody })
 
 export default store;
