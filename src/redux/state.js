@@ -1,5 +1,5 @@
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POS_TEXT = 'UPDATE-NEW-POST-TEXT';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const SEND_MESSAGE = 'SEND_MESSAGE'
 
@@ -47,7 +47,7 @@ let store = {
             this._state.profile.postData.push(newPost);
             this._state.profile.newPostText = '';
             this._rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_NEW_POS_TEXT) {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profile.newPostText = action.newText;
             this._rerenderEntireTree(this._state);
         } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
@@ -56,25 +56,21 @@ let store = {
         } else if (action.type === SEND_MESSAGE) {
             let messageBody = this._state.messages.newMessageText
             this._state.messages.newMessageText = '';
-            this._state.messages.push({id: 3, message: messageBody})
+            this._state.messages.messagesData.push({id: 6, message: messageBody})
             this._rerenderEntireTree(this._state);
         }
     }
 }
 
-export const sendMessageCreator = () => ({
-        type : 'SEND_MESSAGE'
-})
-
-export const updateNewMessageBodyCreator = (messageBody) => ({
-        type : 'UPDATE-NEW-MESSAGE-TEXT', messageBody: messageBody })
-
-export const addPostActionCreator = () => ({
-        type: 'ADD-POST'
-})
+export const addPostActionCreator = () => ({type: 'ADD-POST'})
 
 export const updateNewPostActionCreator = (text) => ({
-        type: 'UPDATE-NEW-POST-TEXT', newText: text
+    type: UPDATE_NEW_POST_TEXT, newText: text
 })
+
+export const sendMessageCreator = () => ({type : 'SEND_MESSAGE'})
+
+export const updateNewMessageBodyCreator = (messageBody) => ({
+        type : UPDATE_NEW_MESSAGE_TEXT, messageBody: messageBody })
 
 export default store;
