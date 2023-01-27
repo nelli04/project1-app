@@ -7,10 +7,6 @@ import Dialogs from "./Dialogs";
 const DialogsContainer = (props) => {
 
      let state = props.messages;
-     /*let dialogsElements = state.dialogsData.map(d => <DialogItem name = {d.name} id = {d.id}/>)
-     let messagesElements = state.messagesData.map(m => <MessageItem message = {m.message}/>)
-     let newMessageBody = state.newMessageText*/
-
      let onSendMessageClick = () => {
          props.store.dispatch(sendMessageCreator())
      }
