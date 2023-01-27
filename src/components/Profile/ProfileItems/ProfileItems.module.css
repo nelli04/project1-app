@@ -8,11 +8,12 @@
   }
 .img:hover {
     -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
+    -ms-transform: scale(1.5);
+    transform: scale(1.2);
 }
 .ava {
   margin-left: 130px;
+    margin-top: 15px;
 }
 .container {
   position: relative;
@@ -38,16 +39,6 @@
 .container:hover .overlay {
     opacity: 1;
     -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-.side {
-    flex: 1%;
-    background-color: #6c757d;
-    padding: 10px;
-    margin-left: 400px;
+    -ms-transform: scale(1.5);
+    transform: scale(1.2);
 }
