@@ -10,14 +10,12 @@ const Dialogs = (props) => {
      let dialogsElements = state.dialogsData.map(d => <DialogItem name = {d.name} id = {d.id}/>)
      let messagesElements = state.messagesData.map(m => <MessageItem message = {m.message}/>)
      let newMessageBody = state.newMessageText
-
      let onSendMessageClick = () => {
          props.sendMessage();
      }
      let onNewMessageChange = (e) => {
          let body = e.target.value;
          updateNewMessageBodyCreator(body)
-         //props.store.dispatch(updateNewMessageBodyCreator(body))
      }
     return (
         <div className = {d.dialogs}>
@@ -41,7 +39,6 @@ const Dialogs = (props) => {
                     </div>
                 </div>
             </div>
-
       )    
 }
 
