@@ -11,8 +11,9 @@ const ProfileItems = () => {
       @username
     </div>
     </div>
-    
-    <div className = {pro.ava}>
+        <div className={pro.row}>
+            <div className={pro.side}>main</div>
+        </div>    <div className = {pro.ava}>
       @username
     </div>
   </div>
