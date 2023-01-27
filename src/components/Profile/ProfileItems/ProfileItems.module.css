@@ -6,23 +6,19 @@
     margin-left: 100px;
     margin-top: 50px;
   }
-
 .img:hover {
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
 }
-
-  .ava {
+.ava {
   margin-left: 130px;
 }
-
 .container {
   position: relative;
   width: 50px;
   max-width: 300px;
 }
-
 .overlay {
   position: absolute;
   bottom: 0;
@@ -39,11 +35,19 @@
   margin-left: 100px;
   margin-top: 50px;
 }
-
-
 .container:hover .overlay {
     opacity: 1;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.side {
+    flex: 1%;
+    background-color: #6c757d;
+    padding: 10px;
+    margin-left: 400px;
 }
