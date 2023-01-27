@@ -1,7 +1,7 @@
 import React from 'react';
-import MyPosts from './MyPosts/MyPosts';
 import p from './Profile.module.css';
 import ProfileItems from './ProfileItems/ProfileItems';
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
     return (
@@ -9,11 +9,10 @@ const Profile = (props) => {
 
     <div >
       <ProfileItems />
-      <MyPosts postData = {props.profile.postData}
+      <MyPostsContainer store = {props.store} /*postData = {props.profile.postData}
                newPostText = {props.profile.newPostText}
-               dispatch = {props.dispatch}/>
+               dispatch = {props.dispatch}*//>
     </div>
-
   </profile>
   )
 }
