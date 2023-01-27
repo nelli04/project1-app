@@ -2,7 +2,6 @@ import React from 'react';
 import pro from './ProfileItems.module.css';
 
 const ProfileItems = () => {
-     
     return (
     <div >
     <div className = {pro.container}>

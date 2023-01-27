@@ -10,7 +10,6 @@ import News from './components/News/News';
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props)  => {
-
   return (
     <BrowserRouter>
     <div className = 'app-wrapper'>
@@ -28,9 +27,6 @@ const App = (props)  => {
       </div>
     </div>
     </BrowserRouter>
-
-    
   )
 }
-
 export default App;
