@@ -3,7 +3,7 @@ import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/messa
 import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {
-     let state = props.store.getState().messages;
+     let stateOne = props.store.getState().messages;
      let onSendMessageClick = () => {
          props.store.dispatch(sendMessageCreator())
      }
@@ -13,7 +13,7 @@ const DialogsContainer = (props) => {
     return (
         <Dialogs update = {onNewMessageChange}
                  send = {onSendMessageClick}
-                 messages = {state} />
+                 messages = {stateOne} />
       )    
 }
 
