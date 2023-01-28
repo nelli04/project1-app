@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts";
 
 const MyPostsContainer = (props) => {
   debugger;
-  let state = props.store.getState().profile;
+  let state = props.store.getState();
   let addPost = () => {
     props.store.dispatch(addPostActionCreator())
   }
