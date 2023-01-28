@@ -1,12 +1,9 @@
 import React from 'react';
-import DialogItem from './DialogItem/DialogItem';
-import MessageItem from './Message/Message';
 import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/messagesReducer";
 import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {
-
-     let state = props.messages;
+     let state = props.store.getState().messages;
      let onSendMessageClick = () => {
          props.store.dispatch(sendMessageCreator())
      }
