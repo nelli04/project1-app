@@ -5,40 +5,40 @@ import MessageItem from './Message/Message';
 
 const Dialogs = (props) => {
 
-     let state = props.messages;
-     let dialogsElements = state.dialogsData.map(d => <DialogItem name = {d.name} id = {d.id}/>)
-     let messagesElements = state.messagesData.map(m => <MessageItem message = {m.message}/>)
-     let newMessageBody = state.newMessageText
-     let onSendMessageClick = () => {
-         props.send();
-     }
-     let onNewMessageChange = (e) => {
-         let body = e.target.value;
-         props.update(body)
-     }
+    let state = props.messages;
+    let dialogsElements = state.dialogsData.map(d => <DialogItem name={d.name} id={d.id}/>)
+    let messagesElements = state.messagesData.map(m => <MessageItem message={m.message}/>)
+    let newMessageBody = state.newMessageText
+    let onSendMessageClick = () => {
+        props.send();
+    }
+    let onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.update(body)
+    }
     return (
-        <div className = {d.dialogs}>
-            <div className = {d.dialogsItems}>
+        <div className={d.dialogs}>
+            <div className={d.dialogsItems}>
                 {dialogsElements}
             </div>
-            <div className = {d.dialogsItems}>
+            <div className={d.dialogsItems}>
                 <div>{messagesElements}</div>
                 <div>
-                        <textarea value = { newMessageBody }
-                                  onChange = { onNewMessageChange }
-                                  placeholder = 'Enter your message' >
+                        <textarea value={newMessageBody}
+                                  onChange={onNewMessageChange}
+                                  placeholder='Enter your message'>
                         </textarea>
 
                     <div>
                         <button
-                            onClick = { onSendMessageClick }>
+                            onClick={onSendMessageClick}>
                             Send
                         </button>
-                        </div>
                     </div>
                 </div>
             </div>
-      )    
+        </div>
+    )
 }
 
 export default Dialogs;
