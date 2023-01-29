@@ -18,7 +18,6 @@ let initialState = {
 }
 const messagesReducer = (state = initialState, action) => {
     let stateOne;
-
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_TEXT: {
             stateOne = {
@@ -27,15 +26,14 @@ const messagesReducer = (state = initialState, action) => {
             };
             return stateOne;
         }
-        case SEND_MESSAGE: {
-            let messageBody = state.newMessageText
+        case SEND_MESSAGE:
+            let messageBody = state.newMessageText;
             stateOne = {
                 ...state,
                 newMessageText: '',
                 dialogsData: [...state.dialogsData, {id: 6, message: messageBody}]
             };
             return stateOne;
-        }
         default:
             return state;
     }
