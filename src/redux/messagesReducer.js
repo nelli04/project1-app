@@ -17,21 +17,34 @@ let initialState = {
     newMessageText: ''
 }
 const messagesReducer = (state = initialState, action) => {
+    let stateOne;
+
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.messageBody;
-            return state;
-        case SEND_MESSAGE:
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            stateOne = {
+                ...state,
+                dialogsData: [...state.dialogsData]
+            };
+            stateOne.newMessageText = action.messageBody;
+            return stateOne;
+        }
+        case SEND_MESSAGE: {
+            stateOne = {
+                ...state,
+                dialogsData: [...state.dialogsData]
+            };
             let messageBody = state.newMessageText
-            state.newMessageText = '';
-            state.messagesData.push({id: 6, message: messageBody})
-            return state;
+            stateOne.newMessageText = '';
+            stateOne.messagesData.push({id: 6, message: messageBody})
+            return stateOne;
+        }
         default:
             return state;
     }
 }
 
-export const sendMessageCreator = () => ({type : 'SEND_MESSAGE'})
+export const sendMessageCreator = () => ({type: 'SEND_MESSAGE'})
 export const updateNewMessageBodyCreator = (messageBody) => ({
-    type : UPDATE_NEW_MESSAGE_TEXT, messageBody: messageBody })
+    type: UPDATE_NEW_MESSAGE_TEXT, messageBody: messageBody
+})
 export default messagesReducer;
