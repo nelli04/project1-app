@@ -21,7 +21,8 @@ const UserReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             let stateOne = {
-                ...state.users
+                ...state,
+                    users: state.users.map(el => el)
             }
 
         case UNFOLLOW:
