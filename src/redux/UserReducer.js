@@ -20,6 +20,9 @@ let initialState = {
 const UserReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
+            let stateOne = {
+                ...state.users
+            }
 
         case UNFOLLOW:
 
