@@ -23,6 +23,7 @@ const App = (props) => {
                         <Route path='/music' element={<Music/>}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/settings' element={<Settings/>}/>
+                        <Route path='/settings' element={<div/>}/>
                     </Routes>
                 </div>
             </div>
