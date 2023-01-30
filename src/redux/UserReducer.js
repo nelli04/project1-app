@@ -4,7 +4,7 @@ const UNFOLLOW = 'UPDATE-NEW-POST-TEXT';
 let initialState = {
     users: [
         {
-            id: 1, follow: false,name: 'Nelli', status: 'good', location: {
+            id: 1, follow: false, name: 'Nelli', status: 'good', location: {
                 city: 'Msk',
                 country: 'Russia'
             }
@@ -22,12 +22,17 @@ const UserReducer = (state = initialState, action) => {
         case FOLLOW:
             let stateOne = {
                 ...state,
-                    users: state.users.map(el => el)
+                users: state.users.map(el => {
+                    if (el.id === action.userId) {
+                        return {...el, follow: true}
+                    }
+                    return el;
+                })
             }
-
         case UNFOLLOW:
 
-        default:
+        default
+        :
             return state;
 
     }
