@@ -28,6 +28,6 @@ const UserReducer = (state = initialState, action) => {
 
     }
 }
-export const followAC = () => ({type: FOLLOW, userId})
-export const unFollowAC = (text) => ({type: UNFOLLOW, userId})
+export const followAC = (userId) => ({type: FOLLOW, userId})
+export const unFollowAC = (userId) => ({type: UNFOLLOW, userId})
 export default UserReducer;
