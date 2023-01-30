@@ -1,16 +1,16 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const FOLLOW = 'ADD-POST';
+const UNFOLLOW = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
     users: [
         {
-            id: 1, name: 'Nelli', status: 'good', location: {
+            id: 1, follow: false,name: 'Nelli', status: 'good', location: {
                 city: 'Msk',
                 country: 'Russia'
             }
         },
         {
-            id: 2, name: 'Vik', status: 'good', location: {
+            id: 2, follow: true, name: 'Vik', status: 'good', location: {
                 city: 'Msk',
                 country: 'Russia'
             }
@@ -24,8 +24,8 @@ const UserReducer = (state = initialState, action) => {
 
     }
 }
-export const addPostActionCreator = () => ({type: 'ADD-POST'})
-export const updateNewPostActionCreator = (text) => ({
-    type: UPDATE_NEW_POST_TEXT, newText: text
+export const followAC = () => ({type: FOLLOW})
+export const unFollowAC = (text) => ({
+    type: UNFOLLOW, newText: text
 })
 export default UserReducer;
