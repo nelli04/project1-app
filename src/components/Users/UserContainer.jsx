@@ -1,11 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
-import userReducer, {followAC, setUserAC, unFollowAC} from "../../redux/UserReducer";
 import {Users} from "./users";
+import {followAC, setUserAC, unFollowAC} from "../../redux/UserReducer";
 
 let mapStateUser = (state) => {
     return {
-        user: state.user.userReducer
+        user: state.user.user
     }
 }
 let mapDispatchUser = (dispatch) => {
