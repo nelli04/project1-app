@@ -3,9 +3,28 @@ const UNFOLLOW = 'UPDATE-NEW-POST-TEXT';
 const SET_USER = 'SET_USER';
 
 let initialState = {
-    user: [
-
-    ]
+    user: [{
+        id: 1,
+        photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_BQOnSIsrT787voKtwIyCQv1xUMU_C1Jig&usqp=CAU',
+        follow: false,
+        name: 'Nelli',
+        status: 'good',
+        location: {
+            city: 'Msk',
+            country: 'Russia'
+        }
+    },
+        {
+            id: 2,
+            photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_BQOnSIsrT787voKtwIyCQv1xUMU_C1Jig&usqp=CAU',
+            follow: true,
+            name: 'Vik',
+            status: 'good',
+            location: {
+                city: 'Msk',
+                country: 'Russia'
+            }
+        }]
 }
 export const userReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -29,7 +48,6 @@ export const userReducer = (state = initialState, action) => {
                     return el;
                 })
             }
-
         case SET_USER:
             return {
                 ...state,
