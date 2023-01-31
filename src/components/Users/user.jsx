@@ -1,8 +1,7 @@
 import React from "react";
 import u from './user.module.css'
 
-export const Users = (props) => {
-
+const User = (props) => {
     if (props.user.length === 0) {
         props.setUser([
                 {
@@ -11,10 +10,7 @@ export const Users = (props) => {
                     follow: false,
                     name: 'Nelli',
                     status: 'good',
-                    location: {
-                        city: 'Msk',
-                        country: 'Russia'
-                    }
+                    location: {city: 'Msk', country: 'Russia'}
                 },
                 {
                     id: 2,
@@ -22,10 +18,15 @@ export const Users = (props) => {
                     follow: true,
                     name: 'Vik',
                     status: 'good',
-                    location: {
-                        city: 'Msk',
-                        country: 'Russia'
-                    }
+                    location: {city: 'Msk', country: 'Russia'}
+                },
+                {
+                    id: 3,
+                    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_BQOnSIsrT787voKtwIyCQv1xUMU_C1Jig&usqp=CAU',
+                    follow: true,
+                    name: 'Vik',
+                    status: 'good',
+                    location: {city: 'Msk', country: 'Russia'}
                 }
             ]
         )
@@ -34,8 +35,8 @@ export const Users = (props) => {
         {
             props.user.map(el => <div key={el.id}>
             <span>
-                <div className={u.photo}>
-                    <img src={el.photo} alt=''/>
+                <div>
+                    <img src={el.photo} className={u.photo} alt='i'/>
                 </div>
                 <div>
                     {el.follow ? <button onClick={() => {
@@ -60,3 +61,5 @@ export const Users = (props) => {
         }
     </div>;
 }
+
+export default User
