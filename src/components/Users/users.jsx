@@ -10,7 +10,10 @@ export const Users = (props) => {
                     <img src={el.photo}/>
                 </div>
                 <div>
-                    <button>Follow</button>
+                    {el.follow ? <button onClick={() => {
+                            props.unfollow(el.id)
+                        }}>Unfollow</button>
+                        : <button onClick={ () => {props.follow(el.id)}}>Follow</button>}
                 </div>
             </span>
                 <span>
