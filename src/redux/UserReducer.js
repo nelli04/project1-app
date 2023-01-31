@@ -18,7 +18,7 @@ let initialState = {
          }*/
     ]
 }
-const UserReducer = (state = initialState, action) => {
+const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             return {
@@ -55,4 +55,4 @@ const UserReducer = (state = initialState, action) => {
 export const followAC = (userId) => ({type: FOLLOW, userId})
 export const unFollowAC = (userId) => ({type: UNFOLLOW, userId})
 export const setUserAC = (user) => ({type: SET_USER, user})
-export default UserReducer;
+export default userReducer;
