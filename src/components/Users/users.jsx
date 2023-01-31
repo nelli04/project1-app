@@ -35,7 +35,7 @@ export const Users = (props) => {
             props.user.map(el => <div key={el.id}>
             <span>
                 <div className={u.photo}>
-                    <img src={el.photo}/>
+                    <img src={el.photo} alt=''/>
                 </div>
                 <div>
                     {el.follow ? <button onClick={() => {
@@ -58,5 +58,5 @@ export const Users = (props) => {
             </span>
             </div>)
         }
-    </div>
+    </div>;
 }
