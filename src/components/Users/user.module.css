@@ -4,8 +4,11 @@
 }
 
 .photo {
+    display: block;
     width: 90px;
     border-radius: 15px;
+    width: 100%;
+    height: auto;
 }
 
 .button {
