@@ -1,3 +1,8 @@
+.user{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
 .photo {
     width: 100px;
     border-radius: 15px;
