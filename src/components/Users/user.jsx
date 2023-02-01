@@ -41,12 +41,12 @@ const User = (props) => {
             </span>
                 <span>
                 <span>
-                    <div>{el.name}</div>
-                    <div>{el.status}</div>
+                    <div className={u.arr}>{el.name}</div>
+                    <div className={u.arr}>{el.status}</div>
                 </span>
                 <span>
-                    <div>{el.location.country}</div>
-                    <div>{el.location.city}</div>
+                    <div className={u.arr}>{el.location.country}</div>
+                    <div className={u.arr}>{el.location.city}</div>
                 </span>
             </span>
             </div>)
