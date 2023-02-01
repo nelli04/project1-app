@@ -19,14 +19,6 @@ const User = (props) => {
                     name: 'Vik',
                     status: 'good',
                     location: {city: 'Msk', country: 'Russia'}
-                },
-                {
-                    id: 3,
-                    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_BQOnSIsrT787voKtwIyCQv1xUMU_C1Jig&usqp=CAU',
-                    follow: true,
-                    name: 'Vik',
-                    status: 'good',
-                    location: {city: 'Msk', country: 'Russia'}
                 }
             ]
         )
