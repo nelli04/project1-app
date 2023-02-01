@@ -31,7 +31,7 @@ const User = (props) => {
             ]
         )
     }
-    return <div>
+    return <div className={u.user}>
         {
             props.user.map(el => <div key={el.id}>
             <span>
