@@ -26,11 +26,13 @@ const User = (props) => {
     return <div className={u.user}>
         {
             props.user.map(el => <div key={el.id}>
-            <span>
-                <div className={u.container}>
+            <span className={u.container}>
+                <div >
                     <img src={el.photo} className={u.photo} alt='i'/>
                 </div>
-                <div className={u.overlay}><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_BQOnSIsrT787voKtwIyCQv1xUMU_C1Jig&usqp=CAU'/></div>
+                <div className={u.overlay}>
+                    <div className={u.text}>Hello</div>
+                </div>
                 <div>
                     {el.follow ? <button className={u.button} onClick={() => {
                             props.unfollow(el.id)
