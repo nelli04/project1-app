@@ -42,7 +42,7 @@ const User = (props) => {
                     {el.follow ? <button className={u.button} onClick={() => {
                             props.unfollow(el.id)
                         }}>Unfollow</button>
-                        : <button onClick={() => {
+                        : <button className={u.button} onClick={() => {
                             props.follow(el.id)
                         }}>Follow</button>}
                 </div>
