@@ -27,7 +27,7 @@ const User = (props) => {
         {
             props.user.map(el => <div key={el.id}>
             <span>
-                <div>
+                <div className={u.container}>
                     <img src={el.photo} className={u.photo} alt='i'/>
                 </div>
                 <div>
