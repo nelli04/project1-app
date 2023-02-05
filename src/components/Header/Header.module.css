@@ -2,6 +2,7 @@
     grid-area: h;
     background-color:#f8f9fa;
     width: auto;
+    color: red;
   }
 
   .header img {
