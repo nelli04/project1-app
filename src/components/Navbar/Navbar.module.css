@@ -5,11 +5,11 @@
     border-radius: 15px;
 }
 
-.item a {
-    color: white;
-    
+.nav a {
+    color: black;
+    text-decoration: none;
 }
 
-.item a.active {
-    color: rgb(194, 194, 205);
+.nav a.item {
+    color: #f1f1f1;
 }
