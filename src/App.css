@@ -8,7 +8,6 @@
   grid-template-rows: 90px 1fr;
   grid-template-columns: 0fr 10fr;
   grid-gap: 5px;
-   
 }
 
 .app-wrapper-content {
